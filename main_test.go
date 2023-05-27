@@ -9,6 +9,12 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func TestMain(m *testing.M) {
+	fmt.Println("Bonjour!")
+	m.Run()
+	fmt.Println("Adios!")
+}
+
 func TestCobaAssertionSkip(test *testing.T) {
 	hasil := runtime.GOOS
 	if hasil != "darwin" {
